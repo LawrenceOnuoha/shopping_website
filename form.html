@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboShopping Website</title>
+
+    <!-- Bootstrap CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#submitButton').click(function () {
+                let name = $('#name').val();
+                let email = $('#email').val();
+                let phone = $('#phone').val();
+
+                console.log(name, email, phone);
+
+                if (name === '') {
+                    alert('Please enter your name');
+                    return; //Halt code execution
+                }
+                if (email === '') {
+                    alert('Please enter your email');
+                    return; //Halt code execution
+                }
+                if (phone === '') {
+                    alert('Please enter your phone number');
+                    return; //Halt code execution
+                }
+
+                alert('All fields are valid');
+            });
+
+        })
+    </script>
+
+</head>
+
+<body>
+    <!-- Return to Homepage -->
+    <div class="container-fluid">
+        <nav class="navbar" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="#"><em>RoboG Kickz</em></a>
+
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+            </ul>
+        </nav>
+    </div> <br> <br>
+
+    <p>
+        <h6>To join our amazing affiloiate program, please provide your information below, and we will reach out to you with more information.</h6>
+        <h6>You'll also be joing our mailing list as well, which automatically enters you into a draw to win a $100 shopping voucher for our shop.</h6>
+    </p>
+    
+    <form>
+        <p>
+            <label>Name</label>
+            <input type="text" id="name">
+        </p>
+        <p>
+            <label>Email</label>
+            <input type="email" id="email">
+        </p>
+        <p>
+            <label>Phone</label>
+            <input type="number" id="phone">
+        </p>
+
+        <button type="button" id="submitButton">Submit</button>
+    </form>
+
+    <div class="bg-success py-2 mt-5 text-center text-white">
+        &copy; <i>2023 Robogarden Inc. All rights reserved.</i>
+    </div>
+
+</body>
+
+</html>
